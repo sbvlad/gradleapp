@@ -4,16 +4,17 @@
 package com.example;
 
 import org.testng.annotations.*;
+
 import static org.testng.Assert.*;
 
 
 public class AppTest {
 
 
-
     @BeforeTest
     public void setUp() {
-        System.out.println(new Object(){}.getClass().getEnclosingMethod().getName());
+        System.out.println(new Object() {
+        }.getClass().getEnclosingMethod().getName());
 
     }
 
@@ -25,7 +26,8 @@ public class AppTest {
 
     @AfterTest
     public void tearDown() {
-        System.out.println(new Object(){}.getClass().getEnclosingMethod().getName());
+        System.out.println(new Object() {
+        }.getClass().getEnclosingMethod().getName());
     }
 
 }

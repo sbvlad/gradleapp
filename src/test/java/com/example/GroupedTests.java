@@ -12,10 +12,11 @@ public class GroupedTests {
         System.out.println("Env is Prepared to Regression");
     }
 
-    @AfterGroups ("Regression")
+    @AfterGroups("Regression")
     public void testExit() {
         System.out.println("Env is Cleaned after the  Regression");
     }
+
     @Test(groups = "Smoke", priority = 1)
     public void testLogin() {
         System.out.println("Login");
@@ -26,11 +27,12 @@ public class GroupedTests {
         System.out.println("Logout");
     }
 
-    @Test(dependsOnGroups = "Smoke",groups = "Regression")
+    @Test(dependsOnGroups = "Smoke", groups = "Regression")
     public void testHomePage() {
         System.out.println("Home Page Created");
     }
-    @Test(dependsOnGroups = {"Smoke","Regression"})
+
+    @Test(dependsOnGroups = {"Smoke", "Regression"})
     public void testAccount() {
         System.out.println("Account Created");
     }

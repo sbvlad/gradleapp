@@ -6,10 +6,10 @@ import org.testng.annotations.Test;
 
 public class xmlParameterized {
 
-    @Parameters({"line","square"})
+    @Parameters({"line", "square"})
     @Test
-    public void printValues(int line, int square){
-        Assert.assertEquals((line*line),square,"Formula is wrong");
+    public void printValues(int line, int square) {
+        Assert.assertEquals((line * line), square, "Formula is wrong");
     }
 
 
