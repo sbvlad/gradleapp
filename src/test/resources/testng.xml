@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression Suite" verbose="1" >
+
+
+    <test name="testingExpression" >
+        <classes>
+            <class name="com.example.AppTest">
+            </class>
+        </classes>
+
+    </test>
+    <test name="GroupedTests" >
+        <groups>
+            <run>
+                <include name="Smoke"/>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.example.GroupedTests">
+                <methods>
+                    <exclude name="testAccount" />
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+    <test name="Parameterized" >
+        <parameter name="line" value="3">
+
+        </parameter>
+        <parameter name="square" value="9">
+
+        </parameter>
+        <classes>
+            <class name="com.example.xmlParameterized">
+            </class>
+        </classes>
+
+    </test>
+    <test name="DataProvided" >
+        <classes>
+            <class name="com.example.DataProvided">
+            </class>
+        </classes>
+
+    </test>
+    <test name="Prioritized" >
+        <classes>
+            <class name="com.example.Prioritized">
+            </class>
+        </classes>
+
+    </test>
+
+</suite>
